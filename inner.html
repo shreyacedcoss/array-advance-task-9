@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task 9</title>
+</head>
+<body>
+    <div id="main"></div>
+    Id : <input id="Id" type="text"><br><br>
+    Name : <input id="Name"type="text"><br><br>
+    Basic Sal : <input id="Basic" type="text">
+</div>
+<div id="add">
+    <p id="p1"></p>
+    <button onclick="add()">add</button>
+    <p id="p2"></p>
+</div>
+    
+</body>
+<script>
+    var str =str
+    "<div><table border=1><tr><th id = 'tdh'>ID</th><th id ='tdh'>Name</th><th id ='tdh'>Basic salary</th>"
+    document.getElementById("p2").innerHTML = str;
+    var arr =[];
+    function add(){
+        var empId = document.getElementById("Id").value;
+        var empName= document.getElementById("Name").value;
+        var empBasic = document.getElementById("Basic").valu
+        try{
+            if (isNaN(empId)){
+                throw "Sorry! Wrong input";
+            }
+            if (!isNaN(empName)){
+                throw "Sorry! Wrong input";
+            }
+            if (isNaN(empBasic)){
+                throw "Sorry! Wrong input";
+            }
+            var emp = {
+                Id : empId,
+                Name : empName,
+                Basic : empBasic,
+            };
+
+        }
+        catch (error){
+            document.getElementById("p1").innerHTML = error;
+        }
+        arr.push(emp);
+        str += 
+        "<tr><td id = 'tds'>"+
+            emp.Id+
+            "</td id='tds'><td id='tds'>"+
+                emp.Name +
+                "</td>/#tds<td id ='tds'>"+
+                    empBasic +
+                    "</td>/#tds "+
+                    "</td> /#tds</tr>";
+                    document.getElementById("p2").innerHTML= str;
+                    console.log(arr);
+
+    }
+</script>
